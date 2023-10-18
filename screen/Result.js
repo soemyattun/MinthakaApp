@@ -16,7 +16,7 @@ const Result = ({navigation}) => {
         </View>
       </View>
 
-      <View style={{flex: 1, alignItems: 'center', backgroundColor: 'white'}}>
+      <View style={styles.searchGroup}>
         <Image
           source={require('../src/assets/mintheinkha-logo.png')}
           style={styles.logoImg}
@@ -70,6 +70,8 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 15,
   },
+  searchGroup: {flex: 1, alignItems: 'center', backgroundColor: 'white'},
+
   logoImg: {
     width: 75,
     height: 75,

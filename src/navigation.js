@@ -4,11 +4,9 @@ import * as React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import First from '../screen/Main';
-import Second from '../screen/ListBox';
+import First from '../screen/Search';
+import Second from '../screen/Listing';
 import Result from '../screen/Result';
-import Home from '../screen/Home';
-import Btn from '../screen/Btn';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,7 +29,6 @@ function index() {
           component={Result}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

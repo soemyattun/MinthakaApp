@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
-import {Questions} from './NumberList';
+import {Questions} from './constants';
 
 const First = ({navigation}) => {
   const [filterQuestion, setFilterQuestion] = useState(Questions);
@@ -29,13 +29,7 @@ const First = ({navigation}) => {
         </TouchableOpacity>
         <Text style={styles.logoName}>လက်ထောက်ဗေဒင်</Text>
 
-        <View
-          style={{
-            borderWidth: 0.2,
-            borderRadius: 5,
-            paddingVertical: 10,
-            paddingRight: 25,
-          }}>
+        <View style={styles.textContainer}>
           <View>
             <Text style={styles.knowText}>
               သိလိုသော မေးခွန်းအား ရှာဖွေပါ...
@@ -69,15 +63,7 @@ const First = ({navigation}) => {
         renderItem={({item}) => {
           return (
             <TouchableOpacity
-              style={{
-                flexDirection: 'row',
-                padding: 10,
-                borderWidth: 0.2,
-                borderRadius: 1,
-                width: 350,
-                paddingEnd: 60,
-                marginStart: 20,
-              }}
+              style={styles.questionContainer}
               onPress={() => {
                 navigation.navigate('Hello', {
                   questionName: item.questionName,
@@ -122,6 +108,12 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginVertical: 5,
   },
+  textContainer: {
+    borderWidth: 0.2,
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingRight: 25,
+  },
   knowText: {
     marginRight: 10,
     color: '#000000',
@@ -146,5 +138,14 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     fontSize: 15,
     color: '#583937',
+  },
+  questionContainer: {
+    flexDirection: 'row',
+    padding: 10,
+    borderWidth: 0.2,
+    borderRadius: 1,
+    width: 350,
+    paddingEnd: 60,
+    marginStart: 20,
   },
 });

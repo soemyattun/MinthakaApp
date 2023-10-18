@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 
 import {useRoute} from '@react-navigation/native';
-import {numberLists} from './NumberList';
-import {Answers} from './NumberList';
+import {numberLists} from './constants';
+import {Answers} from './constants';
 import Btn from './Btn';
 
 const numColu = 9;
