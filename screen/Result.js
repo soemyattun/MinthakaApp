@@ -46,7 +46,7 @@ const Result = ({navigation}) => {
           source={require('../src/assets/love.png')}
           style={styles.loveIcon}
         />
-        <Text style={styles.byName}>by SMT</Text>
+        <Text style={styles.byName}>by Soe</Text>
       </View>
     </View>
   );
